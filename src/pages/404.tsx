@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import '../styles/index.css';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import '../styles/index.css'
 
-function Index() {
+function NotFound() {
   return (
     <main>
       <Helmet>
@@ -10,7 +10,7 @@ function Index() {
       </Helmet>
       <h2>404 Page Not Found</h2>
     </main>
-  );
+  )
 }
 
-export default Index;
+export default NotFound

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import '../styles/index.css';
+import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
+import '../styles/index.css'
 
 function Index() {
   return (
@@ -16,7 +16,7 @@ function Index() {
       <span><a href="https://www.linkedin.com/in/schnellehand/">linkedin/schnellehand</a></span>
       <span></span>
     </main>
-  );
+  )
 }
 
-export default Index;
+export default Index
