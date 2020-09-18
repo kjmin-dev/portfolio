@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Node.js (TypeScript) API',
+    title: 'kjmin Portfolio',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatsby + Node.js (TypeScript) API',
-        short_name: 'Gatsby + Node.js (TypeScript)',
+        name: 'kjmin Portfolio',
+        short_name: 'Kyoungjun Min',
         start_url: '/',
         icon: 'src/images/gatsby-icon.png',
       },
