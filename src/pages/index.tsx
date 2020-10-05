@@ -1,22 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
-import '../styles/index.css'
+import { ThemeProvider } from '@material-ui/core/styles'
+import 'normalize.css'
+import '@/styles/css/global.css'
+import Main from '@/layouts/Main'
+//import About from '@/layouts/About'
+//import Education from '@/layouts/Education'
+//import Skill from '@/layouts/Skill'
+import Contact from '@/layouts/Contact'
+//import Footer from '@/layouts/Footer'
+import { Theme } from '@/styles'
 
-function Index() {
-  return (
-    <main>
-      <Helmet>
-        <title>Kyoungjun Min(kjmin)</title>
-      </Helmet>
-      <h1>Kyoungjun Min(kjmin)</h1>
-      <h2>Contact</h2>
-      <span>kjmin.kr@gmail.com</span>
-      <span>kjmin@kjmin.io</span>
-      <span><a href="https://github.com/schnellehand">github/schnellehand</a></span>
-      <span><a href="https://www.linkedin.com/in/schnellehand/">linkedin/schnellehand</a></span>
-      <span></span>
-    </main>
-  )
+export default function Index(): React.ReactElement {
+    return (
+        <ThemeProvider theme={Theme}>
+            <Helmet>
+                <title>Kyoungjun Min(kjmin)</title>
+            </Helmet>
+            <Main id="home">
+                {
+                //<About id="about" />
+                //<Education id="education" />
+                //<Skill id="skill" />
 }
-
-export default Index
+                <Contact id="contact" />
+            </Main>
+            {
+                //<Footer />
+            }
+        </ThemeProvider>
+    )
+}

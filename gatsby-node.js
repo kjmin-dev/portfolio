@@ -11,8 +11,8 @@ exports.onCreateWebpackConfig = function ({ actions }) {
     actions.setWebpackConfig({
         resolve: {
             alias: {
-                '@': resolve(__dirname, 'src')
-            }
-        }
+                '@': resolve(__dirname, 'src'),
+            },
+        },
     })
 }
