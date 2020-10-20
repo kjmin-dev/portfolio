@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { ThemeProvider } from '@material-ui/core/styles'
 import 'normalize.css'
 import '@/styles/css/global.css'
-import Main from '@/layouts/Main'
+import Layout from '@/layouts/Layout'
 //import About from '@/layouts/About'
 //import Education from '@/layouts/Education'
 //import Skill from '@/layouts/Skill'
@@ -17,17 +17,17 @@ export default function Index(): React.ReactElement {
             <Helmet>
                 <title>Kyoungjun Min(kjmin)</title>
             </Helmet>
-            <Main id="home">
+            <Layout id="home">
                 {
                 //<About id="about" />
                 //<Education id="education" />
                 //<Skill id="skill" />
-}
+                }
                 <Contact id="contact" />
-            </Main>
-            {
+                {
                 //<Footer />
-            }
+                }
+            </Layout>
         </ThemeProvider>
     )
 }
