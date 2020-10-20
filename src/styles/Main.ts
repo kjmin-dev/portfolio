@@ -19,6 +19,6 @@ export default makeStyles((theme) => ({
     intro: {
         height: '35vh',
         [theme.breakpoints.up('sm')]: { height: '27.5vh' },
-        backgroundColor: fade('#cfe8fc', 0.25),
+        backgroundColor: fade('#cfe8fc', 0.15),
     },
 }))
