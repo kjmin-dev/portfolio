@@ -13,6 +13,7 @@ import LinkedIn from '@material-ui/icons/LinkedIn'
 interface Prop {
     name?: string
 }
+
 export default function IconMap(
     props: Prop,
 ): React.FunctionComponentElement<Prop> {
