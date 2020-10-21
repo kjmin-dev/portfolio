@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "gatsby develop",
         "build": "gatsby build",
+        "clean": "gatsby clean",
         "lint": "eslint . --ext .ts,.tsx",
         "prettier": "prettier --write \"**/*.{js,ts,tsx,json}\" --no-semi",
         "precommit": "yarn prettier && yarn lint"
