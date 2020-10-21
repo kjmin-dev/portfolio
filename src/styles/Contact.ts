@@ -11,12 +11,4 @@ export default makeStyles((theme) => ({
         width: '165px',
         textAlign: 'center',
     },
-    profile: {
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        width: '125px',
-        height: '150px',
-        margin: '0 auto',
-        borderRadius: '100px',
-    },
 }))

@@ -8,4 +8,12 @@ export default makeStyles((theme) => ({
             marginBottom: '2.5vh',
         },
     },
+    profile: {
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        width: '150px',
+        height: '200px',
+        margin: '0 auto',
+        borderRadius: '200px',
+    },
 }))

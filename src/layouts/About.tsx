@@ -1,6 +1,6 @@
 import React from 'react'
 import Divider from '@material-ui/core/Divider'
-import { Fade } from 'react-awesome-reveal'
+import { Bounce, Fade } from 'react-awesome-reveal'
 import clsx from 'clsx'
 
 import CrossFadeContainer, { Item } from '@/components/CrossFadeContainer'
@@ -61,49 +61,27 @@ export default function About(props: Prop): React.ReactElement {
                     className={clsx(common.textRight, classes.missonBlock)}
                 >
                     <h2 className={common.pTitle}>
-                        Implement everything in the web
+                        Write more code to write less code
                     </h2>
-                    <h3>SmallTitle</h3>
-                    <p>Desc</p>
+                    <h3>Minimize duplicate codes</h3>
+                    <p>I always think about improving the modularity and reusability of my code.</p>
                 </section>
             ),
         },
     ]
-    /*
-    <Fade direction="up">
-        <img src="/images/kjmin02.jpg" className={ classes.profile } />
-        <h1>Kyoungjun Min</h1>
-        <Divider />
-    </Fade>
-    */
     return (
         <section
             id={props.id}
             className={clsx(common.section, common.textCenter)}
         >
+            <Bounce>
+                <img src="/images/kjmin02.jpg" className={ classes.profile } />
+            </Bounce>
+            <Fade direction="up">
+                <h1>Kyoungjun Min</h1>
+                <Divider />
+            </Fade>
             <CrossFadeContainer start="left" items={items} />
-            {/*
-            <Fade direction="left" className={clsx(common.textLeft, classes.missonBlock)}>
-                <h2 className={common.pTitle}>About Me</h2>
-                <h3>Kyoungjun Min</h3>
-                <p className={common.pDescription}>I'm a Kyoungjun Min, Web developer</p>
-            </Fade>
-            <Fade direction="right" className={clsx(common.textRight, classes.missonBlock)}>
-                <h2 className={common.pTitle}>Implement everything in the web</h2>
-                <h3>Web Technology Lover</h3>
-                <p>I believe that web applications will replace all client application technologies.</p>
-            </Fade>
-            <Fade direction="left" className={clsx(common.textLeft, classes.missonBlock)}>
-                <h2 className={common.pTitle}>Implement everything in the web</h2>
-                <h3>SmallTitle</h3>
-                <p>Desc</p>
-            </Fade>
-            <Fade direction="right" className={clsx(common.textRight, classes.missonBlock)}>
-                <h2 className={common.pTitle}>Implement everything in the web</h2>
-                <h3>SmallTitle</h3>
-                <p>Desc</p>
-            </Fade>
-            */}
         </section>
     )
 }
