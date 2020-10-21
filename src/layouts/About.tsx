@@ -20,7 +20,7 @@ export default function About(props: Prop): React.ReactElement {
             component: (
                 <section className={clsx(common.textLeft, classes.missonBlock)}>
                     <h2 className={common.pTitle}>About Me</h2>
-                    <h3>Who am I?</h3>
+                    <h3 className={common.pSubtitle}>Who am I?</h3>
                     <p className={common.pDescription}>
                         I'm a Kyoungjun Min, Web developer
                     </p>
@@ -36,8 +36,8 @@ export default function About(props: Prop): React.ReactElement {
                     <h2 className={common.pTitle}>
                         Implement everything in the web
                     </h2>
-                    <h3>Web Technology Lover</h3>
-                    <p>
+                    <h3 className={common.pSubtitle}>Web Technology Lover</h3>
+                    <p className={common.pDescription}>
                         I believe that web applications will replace all client
                         application technologies.
                     </p>
@@ -49,8 +49,10 @@ export default function About(props: Prop): React.ReactElement {
             component: (
                 <section className={clsx(common.textLeft, classes.missonBlock)}>
                     <h2 className={common.pTitle}>Lifelong continuing study</h2>
-                    <h3>Up-to-Date knowledge</h3>
-                    <p>I'm always learning the latest technology trends</p>
+                    <h3 className={common.pSubtitle}>Up-to-Date knowledge</h3>
+                    <p className={common.pDescription}>
+                        I'm always learning the latest technology trends
+                    </p>
                 </section>
             ),
         },
@@ -63,8 +65,10 @@ export default function About(props: Prop): React.ReactElement {
                     <h2 className={common.pTitle}>
                         Write more code to write less code
                     </h2>
-                    <h3>Minimize duplicate codes</h3>
-                    <p>
+                    <h3 className={common.pSubtitle}>
+                        Minimize duplicate codes
+                    </h3>
+                    <p className={common.pDescription}>
                         I always think about improving the modularity and
                         reusability of my code.
                     </p>
