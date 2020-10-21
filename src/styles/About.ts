@@ -1,13 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles'
 export default makeStyles((theme) => ({
-    profile: {
-        backgroundImage: "url('/images/kjmin02.jpg')",
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        width:'125px',
-        height:'150px',
-        margin:'0 auto',
-        marginTop: '1.75rem',
-        borderRadius: '100px',
-    }
+    missonBlock: {
+        marginTop: '1vh',
+        marginBottom: '1vh',
+        [theme.breakpoints.up('md')]: {
+            marginTop: '2.5vh',
+            marginBottom: '2.5vh',
+        },
+    },
 }))

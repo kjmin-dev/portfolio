@@ -1,8 +1,9 @@
 import React from 'react'
-import Container from '@material-ui/core/Container'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
 import IconMap from '@/components/IconMap'
+import { Fade } from 'react-awesome-reveal'
+import clsx from 'clsx'
 
 import Common from '@/styles'
 import Style from '@/styles/Contact'
@@ -14,9 +15,17 @@ interface Prop {
 export default function Contact(props: Prop): React.ReactElement {
     const classes = Style()
     const common = Common()
+    const link = {
+        email: {
+            gmail: 'kjmin.kr@gmail.com',
+            kjmin: 'kjmin@kjmin.io',
+        },
+        github: 'https://github.com/schnellehand',
+        linkedin: 'https://www.linkedin.com/in/schnellehand/',
+    }
     return (
-        <section id={props.id}>
-            <Container maxWidth="sm" className={common.section}>
+        <section id={props.id} className={common.section}>
+            <Fade direction="up">
                 <Grid container className={classes.contactBody}>
                     <Grid
                         container
@@ -35,11 +44,25 @@ export default function Contact(props: Prop): React.ReactElement {
                             />
                         </Grid>
                         <Grid item>
-                            <IconMap name="MailOutlined" />
+                            <IconMap name="Email" />
                         </Grid>
                         <Grid item>
-                            <p className={classes.email}>kjmin.kr@gmail.com</p>
-                            <p className={classes.email}>kjmin@kjmin.io</p>
+                            <p
+                                className={clsx(
+                                    classes.email,
+                                    common.materialLink,
+                                )}
+                            >
+                                {link.email.gmail}
+                            </p>
+                            <p
+                                className={clsx(
+                                    classes.email,
+                                    common.materialLink,
+                                )}
+                            >
+                                {link.email.kjmin}
+                            </p>
                             <Divider
                                 orientation="horizontal"
                                 className={common.dividerHorizontal}
@@ -49,7 +72,10 @@ export default function Contact(props: Prop): React.ReactElement {
                             <IconMap name="Github" />
                         </Grid>
                         <Grid item>
-                            <a href="https://github.com/schnellehand">
+                            <a
+                                href={link.github}
+                                className={common.materialLink}
+                            >
                                 github/schnellehand
                             </a>
                             <Divider
@@ -61,7 +87,10 @@ export default function Contact(props: Prop): React.ReactElement {
                             <IconMap name="LinkedIn" />
                         </Grid>
                         <Grid item>
-                            <a href="https://www.linkedin.com/in/schnellehand/">
+                            <a
+                                href={link.linkedin}
+                                className={common.materialLink}
+                            >
                                 linkedin/schnellehand
                             </a>
                             <Divider
@@ -71,24 +100,7 @@ export default function Contact(props: Prop): React.ReactElement {
                         </Grid>
                     </Grid>
                 </Grid>
-            </Container>
-            {/*
-            <h1>Kyoungjun Min(kjmin)</h1>
-            <h2>Contact</h2>
-            <span>kjmin.kr@gmail.com</span>
-            <span>kjmin@kjmin.io</span>
-            <span>
-                <a href="https://github.com/schnellehand">
-                    github/schnellehand
-                </a>
-            </span>
-            <span>
-                <a href="https://www.linkedin.com/in/schnellehand/">
-                    linkedin/schnellehand
-                </a>
-            </span>
-            <span></span>
-            */}
+            </Fade>
         </section>
     )
 }

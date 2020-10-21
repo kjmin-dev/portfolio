@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     },
     home: {
         height: '100vh',
-        backgroundImage: "url('/images/background01.jpg')",
+        backgroundImage: "url('/images/background08.jpg')",
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
     },
