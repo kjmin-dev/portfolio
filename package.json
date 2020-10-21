@@ -12,6 +12,7 @@
     "dependencies": {
         "@material-ui/core": "^4.11.0",
         "@material-ui/icons": "^4.9.1",
+        "clsx": "^1.1.1",
         "gatsby": "^2.24.63",
         "gatsby-image": "^2.4.19",
         "gatsby-plugin-manifest": "^2.4.30",
@@ -20,9 +21,10 @@
         "preact": "^10.5.3",
         "preact-render-to-string": "^5.1.10",
         "react": "^16.13.1",
+        "react-awesome-reveal": "^3.3.1",
         "react-dom": "^16.13.1",
         "react-helmet": "^6.1.0",
-        "react-reveal": "^1.2.2",
+        "react-icons": "^3.11.0",
         "react-scroll": "^1.8.1",
         "react-scrollchor": "^6.0.0"
     },
