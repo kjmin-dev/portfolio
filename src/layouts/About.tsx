@@ -64,7 +64,10 @@ export default function About(props: Prop): React.ReactElement {
                         Write more code to write less code
                     </h2>
                     <h3>Minimize duplicate codes</h3>
-                    <p>I always think about improving the modularity and reusability of my code.</p>
+                    <p>
+                        I always think about improving the modularity and
+                        reusability of my code.
+                    </p>
                 </section>
             ),
         },
@@ -75,7 +78,7 @@ export default function About(props: Prop): React.ReactElement {
             className={clsx(common.section, common.textCenter)}
         >
             <Bounce>
-                <img src="/images/kjmin02.jpg" className={ classes.profile } />
+                <img src="/images/kjmin02.jpg" className={classes.profile} />
             </Bounce>
             <Fade direction="up">
                 <h1>Kyoungjun Min</h1>
