@@ -3,7 +3,6 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 import grey from '@material-ui/core/colors/grey'
 import brown from '@material-ui/core/colors/brown'
-import { CenterFocusStrong } from '@material-ui/icons'
 
 export const Theme = createMuiTheme({
     palette: {
@@ -16,14 +15,6 @@ export const Theme = createMuiTheme({
             main: grey[50],
             dark: brown[600],
         },
-        /*
-        primary: {
-            light: '#757ce8',
-            main: '#3f50b5',
-            dark: '#002884',
-            contrastText: '#fff',
-        }
-        */
     },
 })
 

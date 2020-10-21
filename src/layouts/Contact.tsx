@@ -2,8 +2,10 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
-import Style from '@/styles'
 import IconMap from '@/components/IconMap'
+
+import Common from '@/styles'
+import Style from '@/styles/Contact'
 
 interface Prop {
     id?: string
@@ -11,9 +13,10 @@ interface Prop {
 
 export default function Contact(props: Prop): React.ReactElement {
     const classes = Style()
+    const common = Common()
     return (
         <section id={props.id}>
-            <Container maxWidth="sm" className={classes.section}>
+            <Container maxWidth="sm" className={common.section}>
                 <Grid container className={classes.contactBody}>
                     <Grid
                         container
@@ -22,13 +25,13 @@ export default function Contact(props: Prop): React.ReactElement {
                         alignItems="center"
                     >
                         <Grid item>
-                            <h1 className={classes.title}>Contact</h1>
+                            <h1 className={common.title}>Contact</h1>
                         </Grid>
                         <Grid item>
-                            <h2 className={classes.head}>Kyoungjun Min</h2>
+                            <h2 className={common.head}>Kyoungjun Min</h2>
                             <Divider
                                 orientation="horizontal"
-                                className={classes.dividerHorizontal}
+                                className={common.dividerHorizontal}
                             />
                         </Grid>
                         <Grid item>
@@ -39,7 +42,7 @@ export default function Contact(props: Prop): React.ReactElement {
                             <p className={classes.email}>kjmin@kjmin.io</p>
                             <Divider
                                 orientation="horizontal"
-                                className={classes.dividerHorizontal}
+                                className={common.dividerHorizontal}
                             />
                         </Grid>
                         <Grid item>
@@ -51,7 +54,7 @@ export default function Contact(props: Prop): React.ReactElement {
                             </a>
                             <Divider
                                 orientation="horizontal"
-                                className={classes.dividerHorizontal}
+                                className={common.dividerHorizontal}
                             />
                         </Grid>
                         <Grid item>
@@ -63,7 +66,7 @@ export default function Contact(props: Prop): React.ReactElement {
                             </a>
                             <Divider
                                 orientation="horizontal"
-                                className={classes.dividerHorizontal}
+                                className={common.dividerHorizontal}
                             />
                         </Grid>
                     </Grid>

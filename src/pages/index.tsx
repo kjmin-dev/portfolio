@@ -4,7 +4,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import 'normalize.css'
 import '@/styles/css/global.css'
 import Layout from '@/layouts/Layout'
-//import About from '@/layouts/About'
+import About from '@/layouts/About'
 //import Education from '@/layouts/Education'
 //import Skill from '@/layouts/Skill'
 import Contact from '@/layouts/Contact'
@@ -19,7 +19,7 @@ export default function Index(): React.ReactElement {
             </Helmet>
             <Layout id="home">
                 {
-                //<About id="about" />
+                <About id="about" />
                 //<Education id="education" />
                 //<Skill id="skill" />
                 }

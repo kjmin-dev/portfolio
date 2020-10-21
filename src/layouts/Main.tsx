@@ -1,13 +1,9 @@
 import React from 'react'
 import Scrollchor from 'react-scrollchor'
-import Fab from '@material-ui/core/Fab'
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Style from '@/styles/Main'
-import ScrollTop from '@/components/ScrollTop'
-import Nav from '@/components/Nav'
 
 interface Prop {
     id?: string
