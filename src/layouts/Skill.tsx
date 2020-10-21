@@ -19,22 +19,34 @@ interface Item {
     name: string
     icon: string
     value: number
+    direction?:
+        | 'left'
+        | 'right'
+        | 'bottom-left'
+        | 'bottom-right'
+        | 'down'
+        | 'top-left'
+        | 'top-right'
+        | 'up'
+        | undefined
 }
 
 function ItemWrapper(props: Item): React.ReactElement {
     const classes = Style()
     return (
         <Grid item xs={12} sm={6} lg={4}>
-            <div className={classes.tile}>
-                <p className={classes.skillTitle}>
-                    {props.name}
-                    <ExtendedIconMap
-                        name={props.icon}
-                        className={classes.skillIcon}
-                    />
-                </p>
-                <LinearProgress color="primary" value={props.value} />
-            </div>
+            <Fade direction={props.direction}>
+                <div className={classes.tile}>
+                    <p className={classes.skillTitle}>
+                        {props.name}
+                        <ExtendedIconMap
+                            name={props.icon}
+                            className={classes.skillIcon}
+                        />
+                    </p>
+                    <LinearProgress color="primary" value={props.value} />
+                </div>
+            </Fade>
         </Grid>
     )
 }
@@ -45,39 +57,91 @@ export default function Skill(props: Prop): React.ReactElement {
     const items: Array<_Item> = [
         {
             fade: false,
-            component: <ItemWrapper name="Node.js" icon="Nodejs" value={90} />,
-        },
-        {
-            fade: false,
             component: (
-                <ItemWrapper name="TypeScript" icon="TypeScript" value={90} />
+                <ItemWrapper
+                    name="Node.js"
+                    icon="Nodejs"
+                    value={90}
+                    direction="left"
+                />
             ),
         },
         {
             fade: false,
-            component: <ItemWrapper name="React.js" icon="React" value={80} />,
-        },
-        {
-            fade: false,
-            component: <ItemWrapper name="HTML 5" icon="HTML5" value={80} />,
-        },
-        {
-            fade: false,
-            component: <ItemWrapper name="CSS 3" icon="Nodejs" value={80} />,
-        },
-        {
-            fade: false,
             component: (
-                <ItemWrapper name="Electron.js" icon="Electron" value={75} />
+                <ItemWrapper
+                    name="TypeScript"
+                    icon="TypeScript"
+                    value={90}
+                    direction="right"
+                />
             ),
         },
         {
             fade: false,
-            component: <ItemWrapper name="Vue.js" icon="Vue" value={75} />,
+            component: (
+                <ItemWrapper
+                    name="React.js"
+                    icon="React"
+                    value={80}
+                    direction="left"
+                />
+            ),
         },
         {
             fade: false,
-            component: <ItemWrapper name="C/C++" icon="CPP" value={70} />,
+            component: (
+                <ItemWrapper
+                    name="HTML 5"
+                    icon="HTML5"
+                    value={80}
+                    direction="right"
+                />
+            ),
+        },
+        {
+            fade: false,
+            component: (
+                <ItemWrapper
+                    name="CSS 3"
+                    icon="Nodejs"
+                    value={80}
+                    direction="left"
+                />
+            ),
+        },
+        {
+            fade: false,
+            component: (
+                <ItemWrapper
+                    name="Electron.js"
+                    icon="Electron"
+                    value={75}
+                    direction="right"
+                />
+            ),
+        },
+        {
+            fade: false,
+            component: (
+                <ItemWrapper
+                    name="Vue.js"
+                    icon="Vue"
+                    value={75}
+                    direction="left"
+                />
+            ),
+        },
+        {
+            fade: false,
+            component: (
+                <ItemWrapper
+                    name="C/C++"
+                    icon="CPP"
+                    value={70}
+                    direction="right"
+                />
+            ),
         },
     ]
     return (
@@ -86,14 +150,14 @@ export default function Skill(props: Prop): React.ReactElement {
                 <h1 className={clsx(common.textCenter, common.pTitle)}>
                     Skill
                 </h1>
-                <CrossFadeContainer
-                    start="left"
-                    grid={true}
-                    container={true}
-                    spacing={3}
-                    items={items}
-                />
             </Fade>
+            <CrossFadeContainer
+                start="left"
+                grid={true}
+                container={true}
+                spacing={3}
+                items={items}
+            />
         </section>
     )
 }

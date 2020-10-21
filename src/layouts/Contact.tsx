@@ -25,24 +25,28 @@ export default function Contact(props: Prop): React.ReactElement {
     }
     return (
         <section id={props.id} className={common.section}>
-            <Fade direction="up">
-                <Grid container className={classes.contactBody}>
-                    <Grid
-                        container
-                        direction="column"
-                        justify="center"
-                        alignItems="center"
-                    >
-                        <Grid item>
+            <Grid container className={classes.contactBody}>
+                <Grid
+                    container
+                    direction="column"
+                    justify="center"
+                    alignItems="center"
+                >
+                    <Grid item>
+                        <Fade direction="up">
                             <h1 className={common.title}>Contact</h1>
-                        </Grid>
-                        <Grid item>
+                        </Fade>
+                    </Grid>
+                    <Grid item>
+                        <Fade direction="up">
                             <h2 className={common.head}>Kyoungjun Min</h2>
                             <Divider
                                 orientation="horizontal"
                                 className={common.dividerHorizontal}
                             />
-                        </Grid>
+                        </Fade>
+                    </Grid>
+                    <Fade direction="up">
                         <Grid item>
                             <IconMap name="Email" />
                         </Grid>
@@ -68,6 +72,8 @@ export default function Contact(props: Prop): React.ReactElement {
                                 className={common.dividerHorizontal}
                             />
                         </Grid>
+                    </Fade>
+                    <Fade direction="up">
                         <Grid item>
                             <IconMap name="Github" />
                         </Grid>
@@ -83,6 +89,8 @@ export default function Contact(props: Prop): React.ReactElement {
                                 className={common.dividerHorizontal}
                             />
                         </Grid>
+                    </Fade>
+                    <Fade direction="up">
                         <Grid item>
                             <IconMap name="LinkedIn" />
                         </Grid>
@@ -98,9 +106,9 @@ export default function Contact(props: Prop): React.ReactElement {
                                 className={common.dividerHorizontal}
                             />
                         </Grid>
-                    </Grid>
+                    </Fade>
                 </Grid>
-            </Fade>
+            </Grid>
         </section>
     )
 }

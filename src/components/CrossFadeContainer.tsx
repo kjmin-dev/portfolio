@@ -36,8 +36,12 @@ export interface Item {
 export default function CrossFadeContainer(props: Prop): React.ReactElement {
     // direction===true: left, direction===false: right
     let direction = props.start === 'left' || true
-
     const _generated = props.items.map((elem) => {
+        if (props.grid === true) {
+            // temporary solution
+            // issue: When configuring a grid layout, the fade option destroys the layout.
+            elem.fade === false
+        }
         return (
             <ConditionalWrapper
                 condition={elem.fade === true}
