@@ -14,7 +14,7 @@ interface Prop {
 export default function About(props: Prop): React.ReactElement {
     const common = Common()
     const classes = Style()
-    const items: Array<Item> = [
+    const items: ReadonlyArray<Item> = [
         {
             fade: true,
             component: (

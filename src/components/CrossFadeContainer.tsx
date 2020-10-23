@@ -14,7 +14,7 @@ interface Prop {
     start?: 'left' | 'right'
     maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false
     className?: string
-    items: Array<Item>
+    items: ReadonlyArray<Item>
 }
 
 export interface Item {

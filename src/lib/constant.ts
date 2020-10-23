@@ -5,7 +5,7 @@ interface Menu {
 }
 
 export const ANCHOR = 'bottom'
-export const MENUS: Array<Menu> = [
+export const MENUS: ReadonlyArray<Menu> = [
     { target: '#home', text: 'Home', icon: 'Home' },
     { target: '#about', text: 'About', icon: 'Info' },
     { target: '#education', text: 'Education', icon: 'School' },

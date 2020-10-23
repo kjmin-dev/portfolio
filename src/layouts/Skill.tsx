@@ -53,7 +53,7 @@ function ItemWrapper(props: Item): React.ReactElement {
 export default function Skill(props: Prop): React.ReactElement {
     const common = Common()
     const classes = Style()
-    const items: Array<_Item> = [
+    const items: ReadonlyArray<_Item> = [
         {
             fade: false,
             component: (
