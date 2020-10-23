@@ -21,6 +21,7 @@ import Html5 from '@/icons/html5.svg'
 import Css3 from '@/icons/css3.svg'
 import Electron from '@/icons/electron.svg'
 import Notion from '@/icons/notion.svg'
+import Vercel from '@/icons/vercel.svg'
 
 const Style = makeStyles((theme) => ({
     svgIcon: {
@@ -83,6 +84,7 @@ export function ExtendedIconMap(props: ExtendProp) {
         CSS3: <Css3 className={classes.svgIcon} />,
         Electron: <Electron className={classes.svgIcon} />,
         Notion: <Notion className={classes.svgIcon} />,
+        Vercel: <Vercel className={classes.svgIcon} />,
     }
     if (props.name === undefined) return icons['NotInterested']
     return icons[props.name]

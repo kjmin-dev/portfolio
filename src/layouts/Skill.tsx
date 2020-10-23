@@ -142,6 +142,17 @@ export default function Skill(props: Prop): React.ReactElement {
                 />
             ),
         },
+        {
+            fade: false,
+            component: (
+                <ItemWrapper
+                    name="(Deployment) Vercel"
+                    icon="Vercel"
+                    value={60}
+                    direction="right"
+                />
+            ),
+        },
     ]
     return (
         <section id={props.id} className={common.section}>
