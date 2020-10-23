@@ -23,7 +23,7 @@ export default function Layout(props: Prop): React.ReactElement {
             <Main id={props.id} />
             <Nav />
             {props.children}
-            <Footer />
+            <Footer id="footer" />
             <ScrollTop {...props}>
                 <Fab
                     color="primary"

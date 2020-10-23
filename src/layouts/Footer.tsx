@@ -7,11 +7,15 @@ import IconMap from '@/components/IconMap'
 import Common from '@/styles'
 import Style from '@/styles/Footer'
 
-export default function Footer(): React.ReactElement {
+interface Prop {
+    id?: string
+}
+
+export default function Footer(props: Prop): React.ReactElement {
     const common = Common()
     const classes = Style()
     return (
-        <footer className={clsx(common.textCenter, classes.footerContainer)}>
+        <footer id={ props.id } className={clsx(common.textCenter, classes.footerContainer)}>
             <Container maxWidth="md">
                 <Button
                     color="secondary"
