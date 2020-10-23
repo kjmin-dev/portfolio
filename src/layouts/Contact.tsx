@@ -80,6 +80,7 @@ export default function Contact(props: Prop): React.ReactElement {
                         </Grid>
                         <Grid item>
                             <a
+                                target="_blank"
                                 href={link.github}
                                 className={common.materialLink}
                             >
@@ -97,6 +98,7 @@ export default function Contact(props: Prop): React.ReactElement {
                         </Grid>
                         <Grid item>
                             <a
+                                target="_blank"
                                 href={link.linkedin}
                                 className={common.materialLink}
                             >
@@ -114,6 +116,7 @@ export default function Contact(props: Prop): React.ReactElement {
                         </Grid>
                         <Grid item>
                             <a
+                                target="_blank"
                                 href={link.notion}
                                 className={common.materialLink}
                             >
