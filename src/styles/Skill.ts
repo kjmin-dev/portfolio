@@ -18,4 +18,17 @@ export default makeStyles((theme) => ({
             fontSize: '25px',
         },
     },
+    skillIcon: {
+        width: '18px',
+        height: '18px',
+        marginLeft: '7.5px',
+        [theme.breakpoints.up('md')]: {
+            width: '20px',
+            height: '20px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '22px',
+            height: '22px',
+        },
+    }
 }))

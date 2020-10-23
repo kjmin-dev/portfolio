@@ -10,6 +10,7 @@ import NotInterestedOutlined from '@material-ui/icons/NotInterestedOutlined'
 import Github from '@material-ui/icons/GitHub'
 import LinkedIn from '@material-ui/icons/LinkedIn'
 import { makeStyles } from '@material-ui/core/styles'
+import clsx from 'clsx'
 
 import CPP from '@/icons/cplusplus.svg'
 import Javascript from '@/icons/javascript.svg'
@@ -24,20 +25,15 @@ import Notion from '@/icons/notion.svg'
 import Vercel from '@/icons/vercel.svg'
 
 const Style = makeStyles((theme) => ({
-    svgIcon: {
-        width: '17px',
-        marginLeft: '7.5px',
-        [theme.breakpoints.up('md')]: {
-            width: '18px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            width: '20px',
-        },
+    default_icon: {
+        width: '24px',
+        height: '24px',
     },
 }))
 
 interface ExtendProp {
     name?: string
+    className?: string
 }
 
 interface Prop {
@@ -52,6 +48,7 @@ interface Prop {
     fontSize?: 'small' | 'inherit' | 'default' | 'large'
     style?: any
     component?: React.ElementType<any>
+    className?: string
 }
 
 export default function IconMap(
@@ -72,19 +69,20 @@ export default function IconMap(
 }
 
 export function ExtendedIconMap(props: ExtendProp) {
-    const classes = Style()
+    const { default_icon } = Style()
+    const className = clsx(default_icon, props.className)
     const icons = {
-        CPP: <CPP className={classes.svgIcon} />,
-        JavaScript: <Javascript className={classes.svgIcon} />,
-        TypeScript: <Typescript className={classes.svgIcon} />,
-        Nodejs: <Nodejs className={classes.svgIcon} />,
-        Vue: <Vuejs className={classes.svgIcon} />,
-        React: <Reactjs className={classes.svgIcon} />,
-        HTML5: <Html5 className={classes.svgIcon} />,
-        CSS3: <Css3 className={classes.svgIcon} />,
-        Electron: <Electron className={classes.svgIcon} />,
-        Notion: <Notion className={classes.svgIcon} />,
-        Vercel: <Vercel className={classes.svgIcon} />,
+        CPP: <CPP className={ className } />,
+        JavaScript: <Javascript className={ className } />,
+        TypeScript: <Typescript className={ className } />,
+        Nodejs: <Nodejs className={ className } />,
+        Vue: <Vuejs className={ className } />,
+        React: <Reactjs className={ className } />,
+        HTML5: <Html5 className={ className } />,
+        CSS3: <Css3 className={ className } />,
+        Electron: <Electron className={ className } />,
+        Notion: <Notion className={ className } />,
+        Vercel: <Vercel className={ className } />,
     }
     if (props.name === undefined) return icons['NotInterested']
     return icons[props.name]

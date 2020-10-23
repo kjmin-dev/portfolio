@@ -1,7 +1,7 @@
 import React from 'react'
 import Divider from '@material-ui/core/Divider'
 import Grid from '@material-ui/core/Grid'
-import IconMap from '@/components/IconMap'
+import IconMap, { ExtendedIconMap } from '@/components/IconMap'
 import { Fade } from 'react-awesome-reveal'
 import clsx from 'clsx'
 
@@ -22,6 +22,7 @@ export default function Contact(props: Prop): React.ReactElement {
         },
         github: 'https://github.com/schnellehand',
         linkedin: 'https://www.linkedin.com/in/schnellehand/',
+        notion: 'https://www.notion.so/kjmin/Kyoungjun-Min-e5f3645ff67e4f2fac3192a81d7b083b',
     }
     return (
         <section id={props.id} className={common.section}>
@@ -100,6 +101,23 @@ export default function Contact(props: Prop): React.ReactElement {
                                 className={common.materialLink}
                             >
                                 linkedin/schnellehand
+                            </a>
+                            <Divider
+                                orientation="horizontal"
+                                className={common.dividerHorizontal}
+                            />
+                        </Grid>
+                    </Fade>
+                    <Fade direction="up">
+                        <Grid item>
+                            <ExtendedIconMap name="Notion" />
+                        </Grid>
+                        <Grid item>
+                            <a
+                                href={link.notion}
+                                className={common.materialLink}
+                            >
+                                Notion Resume
                             </a>
                             <Divider
                                 orientation="horizontal"

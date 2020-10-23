@@ -40,6 +40,7 @@ function ItemWrapper(props: Item): React.ReactElement {
                     <p className={classes.skillTitle}>
                         {props.name}
                         <ExtendedIconMap
+                            className={classes.skillIcon}
                             name={props.icon}
                         />
                     </p>
