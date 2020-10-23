@@ -5,29 +5,37 @@ import InfoOutlined from '@material-ui/icons/InfoOutlined'
 import PeopleOutlined from '@material-ui/icons/PeopleOutlined'
 import PhoneOutlined from '@material-ui/icons/PhoneOutlined'
 import SchoolOutlined from '@material-ui/icons/SchoolOutlined'
-import MailIcon from '@material-ui/icons/Mail'
 import MailOutlined from '@material-ui/icons/MailOutlined'
 import NotInterestedOutlined from '@material-ui/icons/NotInterestedOutlined'
 import Github from '@material-ui/icons/GitHub'
 import LinkedIn from '@material-ui/icons/LinkedIn'
-import { CgCPlusPlus } from 'react-icons/cg'
-import { IconBaseProps } from 'react-icons'
-import {
-    SiJavascript,
-    SiTypescript,
-    SiNodeDotJs,
-    SiVueDotJs,
-    SiReact,
-    SiMysql,
-    SiMariadb,
-    SiMongodb,
-    //
-    SiHtml5,
-    SiCss3,
-    SiElectron,
-} from 'react-icons/si/index'
+import { makeStyles } from '@material-ui/core/styles'
 
-interface ExtendProp extends IconBaseProps {
+import CPP from '@/icons/cplusplus.svg'
+import Javascript from '@/icons/javascript.svg'
+import Typescript from '@/icons/typescript.svg'
+import Nodejs from '@/icons/nodejs.svg'
+import Vuejs from '@/icons/vuejs.svg'
+import Reactjs from '@/icons/reactjs.svg'
+import Html5 from '@/icons/html5.svg'
+import Css3 from '@/icons/css3.svg'
+import Electron from '@/icons/electron.svg'
+import Notion from '@/icons/notion.svg'
+
+const Style = makeStyles((theme) => ({
+    svgIcon: {
+        width: '17px',
+        marginLeft: '7.5px',
+        [theme.breakpoints.up('md')]: {
+            width: '18px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '20px',
+        },
+    },
+}))
+
+interface ExtendProp {
     name?: string
 }
 
@@ -63,19 +71,18 @@ export default function IconMap(
 }
 
 export function ExtendedIconMap(props: ExtendProp) {
+    const classes = Style()
     const icons = {
-        CPP: <CgCPlusPlus {...props} />,
-        JavaScript: <SiJavascript {...props} />,
-        TypeScript: <SiTypescript {...props} />,
-        Nodejs: <SiNodeDotJs {...props} />,
-        Vue: <SiVueDotJs {...props} />,
-        React: <SiReact {...props} />,
-        Mysql: <SiMysql {...props} />,
-        Mariadb: <SiMariadb {...props} />,
-        Mongodb: <SiMongodb {...props} />,
-        HTML5: <SiHtml5 {...props} />,
-        CSS3: <SiCss3 {...props} />,
-        Electron: <SiElectron {...props} />,
+        CPP: <CPP className={classes.svgIcon} />,
+        JavaScript: <Javascript className={classes.svgIcon} />,
+        TypeScript: <Typescript className={classes.svgIcon} />,
+        Nodejs: <Nodejs className={classes.svgIcon} />,
+        Vue: <Vuejs className={classes.svgIcon} />,
+        React: <Reactjs className={classes.svgIcon} />,
+        HTML5: <Html5 className={classes.svgIcon} />,
+        CSS3: <Css3 className={classes.svgIcon} />,
+        Electron: <Electron className={classes.svgIcon} />,
+        Notion: <Notion className={classes.svgIcon} />,
     }
     if (props.name === undefined) return icons['NotInterested']
     return icons[props.name]

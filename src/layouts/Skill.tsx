@@ -41,7 +41,6 @@ function ItemWrapper(props: Item): React.ReactElement {
                         {props.name}
                         <ExtendedIconMap
                             name={props.icon}
-                            className={classes.skillIcon}
                         />
                     </p>
                     <LinearProgress color="primary" value={props.value} />
@@ -104,7 +103,7 @@ export default function Skill(props: Prop): React.ReactElement {
             component: (
                 <ItemWrapper
                     name="CSS 3"
-                    icon="Nodejs"
+                    icon="CSS3"
                     value={80}
                     direction="left"
                 />
@@ -161,29 +160,3 @@ export default function Skill(props: Prop): React.ReactElement {
         </section>
     )
 }
-
-// <CrossFadeContainer start='left' items={ items } />
-/*
-<Grid container spacing={3}>
-                    <Grid item xs={12} sm={6} lg={4}>
-                        <div className={classes.tile}>
-                            <p className={classes.skillTitle}>
-                                Node.js
-                                <ExtendedIconMap name="Nodejs" className={classes.skillIcon} />
-                            </p>
-                            <LinearProgress color="primary" value={100} />
-                        </div>
-                    </Grid>
-                    <ItemWrapper name="Node.js2" icon="Nodejs" value={100} />
-                    <ItemWrapper name="Node.js2" icon="Nodejs" value={100} />
-                    <Grid item xs={12} sm={6} lg={4}>
-                        <div className={classes.tile}>
-                            <p className={classes.skillTitle}>
-                                Node.js
-                                <ExtendedIconMap name="Nodejs" className={classes.skillIcon} />
-                            </p>
-                            <LinearProgress color="primary" value={100} />
-                        </div>
-                    </Grid>
-                </Grid>
-*/
