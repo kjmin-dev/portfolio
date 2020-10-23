@@ -91,7 +91,7 @@ export default function Skill(props: Prop): React.ReactElement {
             fade: false,
             component: (
                 <ItemWrapper
-                    name="HTML 5"
+                    name="HTML5"
                     icon="HTML5"
                     value={80}
                     direction="right"
@@ -102,7 +102,7 @@ export default function Skill(props: Prop): React.ReactElement {
             fade: false,
             component: (
                 <ItemWrapper
-                    name="CSS 3"
+                    name="CSS3"
                     icon="CSS3"
                     value={80}
                     direction="left"
