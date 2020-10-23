@@ -82,7 +82,7 @@ export default function About(props: Prop): React.ReactElement {
             className={clsx(common.section, common.textCenter)}
         >
             <Bounce>
-                <img src="/images/kjmin02.jpg" className={classes.profile} />
+                <img src="/images/kjmin02_opt.jpg" className={classes.profile} />
             </Bounce>
             <Fade direction="up">
                 <h1>Kyoungjun Min</h1>
