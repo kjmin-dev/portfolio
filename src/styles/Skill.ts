@@ -30,5 +30,5 @@ export default makeStyles((theme) => ({
             width: '22px',
             height: '22px',
         },
-    }
+    },
 }))

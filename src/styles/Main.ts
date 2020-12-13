@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
 import { fade } from '@material-ui/core/styles/colorManipulator'
-import { Theme } from '@/styles'
 
 export default makeStyles((theme) => ({
     textCenter: {

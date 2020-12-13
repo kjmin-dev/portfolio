@@ -24,7 +24,7 @@ import Electron from '@/icons/electron.svg'
 import Notion from '@/icons/notion.svg'
 import Vercel from '@/icons/vercel.svg'
 
-const Style = makeStyles((theme) => ({
+const Style = makeStyles(() => ({
     default_icon: {
         width: '24px',
         height: '24px',
@@ -68,21 +68,21 @@ export default function IconMap(
     return icons[props.name || 'NotInterested']
 }
 
-export function ExtendedIconMap(props: ExtendProp) {
+export function ExtendedIconMap(props: ExtendProp): typeof icons {
     const { default_icon } = Style()
     const className = clsx(default_icon, props.className)
     const icons = {
-        CPP: <CPP className={ className } />,
-        JavaScript: <Javascript className={ className } />,
-        TypeScript: <Typescript className={ className } />,
-        Nodejs: <Nodejs className={ className } />,
-        Vue: <Vuejs className={ className } />,
-        React: <Reactjs className={ className } />,
-        HTML5: <Html5 className={ className } />,
-        CSS3: <Css3 className={ className } />,
-        Electron: <Electron className={ className } />,
-        Notion: <Notion className={ className } />,
-        Vercel: <Vercel className={ className } />,
+        CPP: <CPP className={className} />,
+        JavaScript: <Javascript className={className} />,
+        TypeScript: <Typescript className={className} />,
+        Nodejs: <Nodejs className={className} />,
+        Vue: <Vuejs className={className} />,
+        React: <Reactjs className={className} />,
+        HTML5: <Html5 className={className} />,
+        CSS3: <Css3 className={className} />,
+        Electron: <Electron className={className} />,
+        Notion: <Notion className={className} />,
+        Vercel: <Vercel className={className} />,
     }
     if (props.name === undefined) return icons['NotInterested']
     return icons[props.name]

@@ -11,14 +11,14 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-plugin-react-svg",
+            resolve: 'gatsby-plugin-react-svg',
             options: {
                 rule: {
-                    include: /icons/ // See below to configure properly
-                }
-            }
+                    include: /icons/, // See below to configure properly
+                },
+            },
         },
-            `gatsby-plugin-preact`,
+        `gatsby-plugin-preact`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-manifest`,

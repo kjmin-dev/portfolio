@@ -22,7 +22,8 @@ export default function Contact(props: Prop): React.ReactElement {
         },
         github: 'https://github.com/schnellehand',
         linkedin: 'https://www.linkedin.com/in/schnellehand/',
-        notion: 'https://www.notion.so/kjmin/Kyoungjun-Min-e5f3645ff67e4f2fac3192a81d7b083b',
+        notion:
+            'https://www.notion.so/kjmin/Kyoungjun-Min-e5f3645ff67e4f2fac3192a81d7b083b',
     }
     return (
         <section id={props.id} className={common.section}>

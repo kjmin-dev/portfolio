@@ -1,5 +1,4 @@
 import React from 'react'
-import Container from '@material-ui/core/Container'
 import { Fade } from 'react-awesome-reveal'
 import clsx from 'clsx'
 import LinearProgress from '@material-ui/core/LinearProgress'
@@ -22,12 +21,10 @@ export default function Education(props: Prop): React.ReactElement {
             component: (
                 <article className={common.textLeft}>
                     <h2 className={common.pSubtitle}>
-                        {'< Looking for a job >'}
+                        {'Covision Inc., Republic of Korea'}
                     </h2>
-                    <p className={common.pDescription}>
-                        Frontend / Backend Web Developer
-                    </p>
-                    <p className={common.pSmalltext}>2020.09 ~ Current</p>
+                    <p className={common.pDescription}>Backend Developer</p>
+                    <p className={common.pSmalltext}>2020.12 ~ Current</p>
                     <LinearProgress />
                 </article>
             ),

@@ -9,9 +9,9 @@ import Common from '@/styles'
 import Style from '@/styles/Footer'
 
 interface Item {
-    color?: "inherit" | "primary" | "secondary" | "default" | undefined
+    color?: 'inherit' | 'primary' | 'secondary' | 'default' | undefined
     className?: string
-    href: string,
+    href: string
     icon: string
 }
 
@@ -24,22 +24,22 @@ interface Prop {
 }
 
 function FooterList(props: FooterListProp): React.ReactElement {
-    return <>
-        {
-            props.items.map((item) => {
+    return (
+        <>
+            {props.items.map((item) => {
                 return (
-                        <Button
-                            color={item.color}
-                            className={item.className}
-                            target="_blank"
-                            href={item.href}
-                        >
-                            <IconMap name={item.icon} />
-                        </Button>
+                    <Button
+                        color={item.color}
+                        className={item.className}
+                        target="_blank"
+                        href={item.href}
+                    >
+                        <IconMap name={item.icon} />
+                    </Button>
                 )
-            })
-        }
-    </>
+            })}
+        </>
+    )
 }
 
 export default function Footer(props: Prop): React.ReactElement {
@@ -47,26 +47,29 @@ export default function Footer(props: Prop): React.ReactElement {
     const classes = Style()
     const items: ReadonlyArray<Item> = [
         {
-            color: "secondary",
+            color: 'secondary',
             className: classes.buttonHover,
-            href: "mailto:kjmin.kr@gmail.com",
-            icon: "Email",
+            href: 'mailto:kjmin.kr@gmail.com',
+            icon: 'Email',
         },
         {
-            color: "secondary",
+            color: 'secondary',
             className: classes.buttonHover,
-            href: "https://github.com/schnellehand",
-            icon: "Github",
+            href: 'https://github.com/schnellehand',
+            icon: 'Github',
         },
         {
-            color: "secondary",
+            color: 'secondary',
             className: classes.buttonHover,
-            href: "https://linkedin.com/in/schnellehand",
-            icon: "LinkedIn",
-        }
+            href: 'https://linkedin.com/in/schnellehand',
+            icon: 'LinkedIn',
+        },
     ]
     return (
-        <footer id={props.id} className={clsx(common.textCenter, classes.footerContainer)}>
+        <footer
+            id={props.id}
+            className={clsx(common.textCenter, classes.footerContainer)}
+        >
             <Container maxWidth="md">
                 <Bounce>
                     <FooterList items={items} />

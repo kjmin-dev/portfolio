@@ -7,10 +7,10 @@ import { MENUS } from '@/lib/constant'
 import IconMap from '@/components/IconMap'
 import Scrollchor from 'react-scrollchor'
 
-export default function Drawer(props): React.ReactElement {
+export default function Drawer(): React.ReactElement {
     return (
         <List>
-            {MENUS.map((route, index) => (
+            {MENUS.map((route) => (
                 <ListItem
                     button
                     key={route.text}

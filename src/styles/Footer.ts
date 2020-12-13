@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
     //#E91E63
     footerContainer: {
         height: '140px',

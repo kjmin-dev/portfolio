@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box'
 
 export default function CircularProgressWithLabel(
     props: CircularProgressProps & { value: number },
-) {
+): React.ReactElement {
     return (
         <Box position="relative" display="inline-flex">
             <CircularProgress variant="static" {...props} />

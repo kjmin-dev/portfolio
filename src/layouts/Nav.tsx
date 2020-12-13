@@ -50,7 +50,7 @@ export default function Nav(): React.ReactElement {
                 >
                     Kyoungjun Min
                 </Typography>
-                {MENUS.map((route, index) => (
+                {MENUS.map((route) => (
                     <Button
                         color="inherit"
                         component={Scrollchor}

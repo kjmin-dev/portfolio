@@ -1,9 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
 
-import grey from '@material-ui/core/colors/grey'
-import brown from '@material-ui/core/colors/brown'
-
 export const Theme = createMuiTheme({
     palette: {
         //1b242f
