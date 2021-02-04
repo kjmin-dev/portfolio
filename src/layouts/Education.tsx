@@ -23,7 +23,7 @@ export default function Education(props: Prop): React.ReactElement {
                     <h2 className={common.pSubtitle}>
                         {'Covision Inc., Republic of Korea'}
                     </h2>
-                    <p className={common.pDescription}>Backend Developer</p>
+                    <p className={common.pDescription}>React / React Native developer</p>
                     <p className={common.pSmalltext}>2020.12 ~ Current</p>
                     <LinearProgress />
                 </article>

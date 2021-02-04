@@ -57,7 +57,7 @@ export default function Layout(props: Prop): React.ReactElement {
                                 >
                                     <Fade direction="up">
                                         <h2>
-                                            Frontend / Backend Web Development
+                                            Web Development
                                         </h2>
                                     </Fade>
                                 </Grid>
